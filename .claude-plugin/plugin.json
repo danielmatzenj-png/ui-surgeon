@@ -1,0 +1,22 @@
+{
+  "name": "ui-surgeon",
+  "version": "1.0.0",
+  "description": "Closed-loop visual geometry, pixel-verified contrast (WCAG 2.1 + APCA), and WCAG 2.2 accessibility surgeon for Claude Code. Zero dependencies.",
+  "author": {
+    "name": "Daniel Matzen"
+  },
+  "homepage": "https://github.com/danielmatzenj-png/ui-surgeon",
+  "repository": "https://github.com/danielmatzenj-png/ui-surgeon",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "accessibility",
+    "wcag",
+    "apca",
+    "contrast",
+    "responsive",
+    "layout",
+    "visual-qa",
+    "claude-skill"
+  ]
+}

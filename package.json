@@ -1,0 +1,53 @@
+{
+  "name": "ui-surgeon",
+  "version": "1.0.0",
+  "author": "Daniel Matzen <danielmatzenj-png@users.noreply.github.com>",
+  "description": "Closed-loop visual geometry, pixel-verified contrast, and WCAG 2.2 accessibility surgeon for Claude Code and CI. Zero runtime dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "bin": {
+    "ui-surgeon": "./bin/ui-surgeon.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./rules": "./src/rules/index.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "skills/",
+    ".claude-plugin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "audit:broken": "node bin/ui-surgeon.mjs test/fixtures/broken-landing.html --viewports mobile,desktop --annotate --out .surgeon-demo",
+    "audit:clean": "node bin/ui-surgeon.mjs test/fixtures/clean-landing.html --viewports mobile,desktop"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-skill",
+    "agent-skills",
+    "accessibility",
+    "wcag",
+    "apca",
+    "visual-testing",
+    "ui-audit",
+    "layout-testing",
+    "contrast-checker",
+    "cdp",
+    "zero-dependency"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielmatzenj-png/ui-surgeon.git"
+  },
+  "homepage": "https://github.com/danielmatzenj-png/ui-surgeon#readme",
+  "bugs": {
+    "url": "https://github.com/danielmatzenj-png/ui-surgeon/issues"
+  }
+}

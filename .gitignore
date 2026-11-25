@@ -1,0 +1,5 @@
+node_modules/
+.ui-surgeon/
+.surgeon-demo/
+*.log
+.DS_Store

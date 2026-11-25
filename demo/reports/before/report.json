@@ -1,0 +1,2918 @@
+{
+  "tool": "ui-surgeon",
+  "version": "1.0.0",
+  "target": "demo/without-surgeon.html",
+  "auditedAt": "2026-11-25T21:14:13.204Z",
+  "durationMs": 3666,
+  "summary": {
+    "score": 0,
+    "total": 110,
+    "counts": {
+      "critical": 30,
+      "high": 56,
+      "medium": 11,
+      "low": 13
+    },
+    "passed": false
+  },
+  "matrix": [
+    {
+      "viewport": "mobile",
+      "width": 375,
+      "height": 812,
+      "colorScheme": "light",
+      "elementsScanned": 40,
+      "tabStopsVisited": 6,
+      "cls": 0,
+      "findingCount": 43
+    },
+    {
+      "viewport": "tablet",
+      "width": 768,
+      "height": 1024,
+      "colorScheme": "light",
+      "elementsScanned": 40,
+      "tabStopsVisited": 6,
+      "cls": 0,
+      "findingCount": 34
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 900,
+      "colorScheme": "light",
+      "elementsScanned": 40,
+      "tabStopsVisited": 6,
+      "cls": 0,
+      "findingCount": 33
+    }
+  ],
+  "diff": null,
+  "screenshots": [
+    {
+      "viewport": "mobile",
+      "colorScheme": "light",
+      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/before/annotated-mobile-light.png"
+    },
+    {
+      "viewport": "tablet",
+      "colorScheme": "light",
+      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/before/annotated-tablet-light.png"
+    },
+    {
+      "viewport": "desktop",
+      "colorScheme": "light",
+      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/before/annotated-desktop-light.png"
+    }
+  ],
+  "findings": [
+    {
+      "ruleId": "horizontal-overflow",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "html > body > section.metrics-strip:nth-of-type(2)",
+      "rect": {
+        "x": 0,
+        "y": 416.8,
+        "right": 520,
+        "bottom": 494.8,
+        "width": 520,
+        "height": 78
+      },
+      "message": "Element overflows viewport right edge by +145px (520px > 375px).",
+      "evidence": {
+        "overflowPx": 145,
+        "elementRight": 520,
+        "elementWidth": 520,
+        "viewportWidth": 375
+      },
+      "fix": "Constrain `html > body > section.metrics-strip:nth-of-type(2)` with `max-width: 100%; box-sizing: border-box;` or use responsive wrapping (`flex-wrap: wrap` / `grid-template-columns: repeat(auto-fit, minmax(0, 1fr))`).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "horizontal-overflow",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "html > body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3)",
+      "rect": {
+        "x": 349.3,
+        "y": 416.8,
+        "right": 504,
+        "bottom": 494.8,
+        "width": 154.7,
+        "height": 78
+      },
+      "message": "Element overflows viewport right edge by +129px (504px > 375px).",
+      "evidence": {
+        "overflowPx": 129,
+        "elementRight": 504,
+        "elementWidth": 154.7,
+        "viewportWidth": 375
+      },
+      "fix": "Constrain `html > body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3)` with `max-width: 100%; box-sizing: border-box;` or use responsive wrapping (`flex-wrap: wrap` / `grid-template-columns: repeat(auto-fit, minmax(0, 1fr))`).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "horizontal-overflow",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "html > body > header.navbar > div.nav-links",
+      "rect": {
+        "x": 374.5,
+        "y": 23.5,
+        "right": 496,
+        "bottom": 40.5,
+        "width": 121.5,
+        "height": 17
+      },
+      "message": "Element overflows viewport right edge by +121px (496px > 375px).",
+      "evidence": {
+        "overflowPx": 121,
+        "elementRight": 496,
+        "elementWidth": 121.5,
+        "viewportWidth": 375
+      },
+      "fix": "Constrain `html > body > header.navbar > div.nav-links` with `max-width: 100%; box-sizing: border-box;` or use responsive wrapping (`flex-wrap: wrap` / `grid-template-columns: repeat(auto-fit, minmax(0, 1fr))`).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "horizontal-overflow",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)",
+      "rect": {
+        "x": 448.7,
+        "y": 23.5,
+        "right": 496,
+        "bottom": 40.5,
+        "width": 47.3,
+        "height": 17
+      },
+      "message": "Element overflows viewport right edge by +121px (496px > 375px).",
+      "evidence": {
+        "overflowPx": 121,
+        "elementRight": 496,
+        "elementWidth": 47.3,
+        "viewportWidth": 375
+      },
+      "fix": "Constrain `body > header.navbar > div.nav-links > a:nth-of-type(2)` with `max-width: 100%; box-sizing: border-box;` or use responsive wrapping (`flex-wrap: wrap` / `grid-template-columns: repeat(auto-fit, minmax(0, 1fr))`).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "horizontal-overflow",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-val:nth-of-type(1)",
+      "rect": {
+        "x": 364.3,
+        "y": 431.8,
+        "right": 489,
+        "bottom": 459.8,
+        "width": 124.7,
+        "height": 28
+      },
+      "message": "Element overflows viewport right edge by +114px (489px > 375px).",
+      "evidence": {
+        "overflowPx": 114,
+        "elementRight": 489,
+        "elementWidth": 124.7,
+        "viewportWidth": 375
+      },
+      "fix": "Constrain `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-val:nth-of-type(1)` with `max-width: 100%; box-sizing: border-box;` or use responsive wrapping (`flex-wrap: wrap` / `grid-template-columns: repeat(auto-fit, minmax(0, 1fr))`).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "horizontal-overflow",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 364.3,
+        "y": 463.8,
+        "right": 489,
+        "bottom": 479.8,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Element overflows viewport right edge by +114px (489px > 375px).",
+      "evidence": {
+        "overflowPx": 114,
+        "elementRight": 489,
+        "elementWidth": 124.7,
+        "viewportWidth": 375
+      },
+      "fix": "Constrain `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)` with `max-width: 100%; box-sizing: border-box;` or use responsive wrapping (`flex-wrap: wrap` / `grid-template-columns: repeat(auto-fit, minmax(0, 1fr))`).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "hit-test-occlusion",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "2.4.11",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
+      "rect": {
+        "x": 24,
+        "y": 28,
+        "right": 262.3,
+        "bottom": 64,
+        "width": 238.3,
+        "height": 36
+      },
+      "message": "Interactive <button> \"New: v4.2 Live Benchmarks →\" is covered at its center by html > body > header.navbar (fixed, z-index: 100).",
+      "evidence": {
+        "occludedBy": {
+          "selector": "html > body > header.navbar",
+          "tag": "header",
+          "position": "fixed",
+          "zIndex": "100"
+        }
+      },
+      "fix": "Adjust spacing, `scroll-margin-top`, or z-index layering so `html > body > header.navbar` does not cover `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub",
+      "rect": {
+        "x": 24,
+        "y": 220.2,
+        "right": 351,
+        "bottom": 276.8,
+        "width": 327,
+        "height": 56.6
+      },
+      "message": "Contrast 1.3:1 (APCA Lc -16.9) fails WCAG AA 4.5:1 for normal text \"Real-time funnel telemetry, automate\" [pixel-sampled: #f8fafc on #fbd2df].",
+      "evidence": {
+        "ratio": 1.3,
+        "required": 4.5,
+        "apcaLc": -16.9,
+        "fgHex": "#f8fafc",
+        "bgHex": "#fbd2df",
+        "fontSizePx": 16,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "pixel-sampled",
+        "suggestedHex": "#3b628a",
+        "suggestedRatio": 4.66
+      },
+      "fix": "Change `color` on `body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub` from `#f8fafc` to `#3b628a` (achieves 4.66:1 while preserving hue).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 31,
+        "y": 463.8,
+        "right": 155.7,
+        "bottom": 479.8,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Uptime SLA\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 197.7,
+        "y": 463.8,
+        "right": 322.3,
+        "bottom": 479.8,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Query Latency\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 364.3,
+        "y": 463.8,
+        "right": 489,
+        "bottom": 479.8,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Active Teams\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-accessible-name",
+      "severity": "critical",
+      "category": "accessibility",
+      "wcag": "4.1.2",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action",
+      "rect": {
+        "x": 181.8,
+        "y": 309.8,
+        "right": 201.8,
+        "bottom": 329.8,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Interactive <button> has no accessible name (invisible to screen readers).",
+      "evidence": {
+        "tag": "button",
+        "role": ""
+      },
+      "fix": "Add visible text or `aria-label=\"Describe action\"` to `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-form-label",
+      "severity": "critical",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#work-email",
+      "rect": {
+        "x": 21,
+        "y": 932.8,
+        "right": 188,
+        "bottom": 954.8,
+        "width": 167,
+        "height": 22
+      },
+      "message": "<input type=\"email\"> lacks an associated label (placeholder \"name@company.com\" is not an accessible label).",
+      "evidence": {
+        "tag": "input",
+        "type": "email",
+        "placeholder": "name@company.com"
+      },
+      "fix": "Associate a `<label for=\"...\">` or add `aria-label` to `#work-email`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "broken-image",
+      "severity": "critical",
+      "category": "media",
+      "wcag": "1.1.1",
+      "selector": "#newsletter > img",
+      "rect": {
+        "x": 21,
+        "y": 879.796875,
+        "width": 96,
+        "height": 40
+      },
+      "message": "Broken image: \"/assets/pulseflow-preview-missing.png\" failed to load (naturalWidth = 0).",
+      "evidence": {
+        "src": "/assets/pulseflow-preview-missing.png",
+        "complete": true
+      },
+      "fix": "Fix the image URL or asset path on `#newsletter > img`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "hit-test-occlusion",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "2.4.11",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
+      "rect": {
+        "x": 24,
+        "y": 28,
+        "right": 262.3,
+        "bottom": 64,
+        "width": 238.3,
+        "height": 36
+      },
+      "message": "Interactive <button> \"New: v4.2 Live Benchmarks →\" is covered at its center by html > body > header.navbar (fixed, z-index: 100).",
+      "evidence": {
+        "occludedBy": {
+          "selector": "html > body > header.navbar",
+          "tag": "header",
+          "position": "fixed",
+          "zIndex": "100"
+        }
+      },
+      "fix": "Adjust spacing, `scroll-margin-top`, or z-index layering so `html > body > header.navbar` does not cover `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub",
+      "rect": {
+        "x": 24,
+        "y": 137.4,
+        "right": 584,
+        "bottom": 175.1,
+        "width": 560,
+        "height": 37.8
+      },
+      "message": "Contrast 1.33:1 (APCA Lc -18.3) fails WCAG AA 4.5:1 for normal text \"Real-time funnel telemetry, automate\" [pixel-sampled: #f8fafc on #f1d1ec].",
+      "evidence": {
+        "ratio": 1.33,
+        "required": 4.5,
+        "apcaLc": -18.3,
+        "fgHex": "#f8fafc",
+        "bgHex": "#f1d1ec",
+        "fontSizePx": 16,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "pixel-sampled",
+        "suggestedHex": "#3a6187",
+        "suggestedRatio": 4.65
+      },
+      "fix": "Change `color` on `body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub` from `#f8fafc` to `#3a6187` (achieves 4.65:1 while preserving hue).",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 155,
+        "y": 362.1,
+        "right": 279.7,
+        "bottom": 378.1,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Uptime SLA\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 321.7,
+        "y": 362.1,
+        "right": 446.3,
+        "bottom": 378.1,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Query Latency\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 488.3,
+        "y": 362.1,
+        "right": 613,
+        "bottom": 378.1,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Active Teams\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-accessible-name",
+      "severity": "critical",
+      "category": "accessibility",
+      "wcag": "4.1.2",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action",
+      "rect": {
+        "x": 181.8,
+        "y": 208.1,
+        "right": 201.8,
+        "bottom": 228.1,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Interactive <button> has no accessible name (invisible to screen readers).",
+      "evidence": {
+        "tag": "button",
+        "role": ""
+      },
+      "fix": "Add visible text or `aria-label=\"Describe action\"` to `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-form-label",
+      "severity": "critical",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#work-email",
+      "rect": {
+        "x": 21,
+        "y": 723.1,
+        "right": 188,
+        "bottom": 745.1,
+        "width": 167,
+        "height": 22
+      },
+      "message": "<input type=\"email\"> lacks an associated label (placeholder \"name@company.com\" is not an accessible label).",
+      "evidence": {
+        "tag": "input",
+        "type": "email",
+        "placeholder": "name@company.com"
+      },
+      "fix": "Associate a `<label for=\"...\">` or add `aria-label` to `#work-email`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "broken-image",
+      "severity": "critical",
+      "category": "media",
+      "wcag": "1.1.1",
+      "selector": "#newsletter > img",
+      "rect": {
+        "x": 21,
+        "y": 670.140625,
+        "width": 96,
+        "height": 40
+      },
+      "message": "Broken image: \"/assets/pulseflow-preview-missing.png\" failed to load (naturalWidth = 0).",
+      "evidence": {
+        "src": "/assets/pulseflow-preview-missing.png",
+        "complete": true
+      },
+      "fix": "Fix the image URL or asset path on `#newsletter > img`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "hit-test-occlusion",
+      "severity": "critical",
+      "category": "geometry",
+      "wcag": "2.4.11",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
+      "rect": {
+        "x": 240,
+        "y": 28,
+        "right": 478.3,
+        "bottom": 64,
+        "width": 238.3,
+        "height": 36
+      },
+      "message": "Interactive <button> \"New: v4.2 Live Benchmarks →\" is covered at its center by html > body > header.navbar (fixed, z-index: 100).",
+      "evidence": {
+        "occludedBy": {
+          "selector": "html > body > header.navbar",
+          "tag": "header",
+          "position": "fixed",
+          "zIndex": "100"
+        }
+      },
+      "fix": "Adjust spacing, `scroll-margin-top`, or z-index layering so `html > body > header.navbar` does not cover `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub",
+      "rect": {
+        "x": 240,
+        "y": 137.4,
+        "right": 800,
+        "bottom": 175.1,
+        "width": 560,
+        "height": 37.8
+      },
+      "message": "Contrast 1.35:1 (APCA Lc -19.2) fails WCAG AA 4.5:1 for normal text \"Real-time funnel telemetry, automate\" [pixel-sampled: #f8fafc on #edd0ee].",
+      "evidence": {
+        "ratio": 1.35,
+        "required": 4.5,
+        "apcaLc": -19.2,
+        "fgHex": "#f8fafc",
+        "bgHex": "#edd0ee",
+        "fontSizePx": 16,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "pixel-sampled",
+        "suggestedHex": "#396086",
+        "suggestedRatio": 4.66
+      },
+      "fix": "Change `color` on `body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub` from `#f8fafc` to `#396086` (achieves 4.66:1 while preserving hue).",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 491,
+        "y": 362.1,
+        "right": 615.7,
+        "bottom": 378.1,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Uptime SLA\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 657.7,
+        "y": 362.1,
+        "right": 782.3,
+        "bottom": 378.1,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Query Latency\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "critical",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)",
+      "rect": {
+        "x": 824.3,
+        "y": 362.1,
+        "right": 949,
+        "bottom": 378.1,
+        "width": 124.7,
+        "height": 16
+      },
+      "message": "Contrast 2.12:1 (APCA Lc 41.6) fails WCAG AA 4.5:1 for normal text \"Active Teams\" [alpha-stack: #a8b3c2 on #ffffff].",
+      "evidence": {
+        "ratio": 2.12,
+        "required": 4.5,
+        "apcaLc": 41.6,
+        "fgHex": "#a8b3c2",
+        "bgHex": "#ffffff",
+        "fontSizePx": 13,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#64758e",
+        "suggestedRatio": 4.69
+      },
+      "fix": "Change `color` on `body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)` from `#a8b3c2` to `#64758e` (achieves 4.69:1 while preserving hue).",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-accessible-name",
+      "severity": "critical",
+      "category": "accessibility",
+      "wcag": "4.1.2",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action",
+      "rect": {
+        "x": 397.8,
+        "y": 208.1,
+        "right": 417.8,
+        "bottom": 228.1,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Interactive <button> has no accessible name (invisible to screen readers).",
+      "evidence": {
+        "tag": "button",
+        "role": ""
+      },
+      "fix": "Add visible text or `aria-label=\"Describe action\"` to `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-form-label",
+      "severity": "critical",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#work-email",
+      "rect": {
+        "x": 261,
+        "y": 615.1,
+        "right": 428,
+        "bottom": 637.1,
+        "width": 167,
+        "height": 22
+      },
+      "message": "<input type=\"email\"> lacks an associated label (placeholder \"name@company.com\" is not an accessible label).",
+      "evidence": {
+        "tag": "input",
+        "type": "email",
+        "placeholder": "name@company.com"
+      },
+      "fix": "Associate a `<label for=\"...\">` or add `aria-label` to `#work-email`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "broken-image",
+      "severity": "critical",
+      "category": "media",
+      "wcag": "1.1.1",
+      "selector": "#newsletter > img",
+      "rect": {
+        "x": 261,
+        "y": 562.140625,
+        "width": 96,
+        "height": 40
+      },
+      "message": "Broken image: \"/assets/pulseflow-preview-missing.png\" failed to load (naturalWidth = 0).",
+      "evidence": {
+        "src": "/assets/pulseflow-preview-missing.png",
+        "complete": true
+      },
+      "fix": "Fix the image URL or asset path on `#newsletter > img`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "element-overlap",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "html > body > header.navbar > span.brand",
+      "rect": {
+        "x": 24,
+        "y": 21.5,
+        "right": 129.3,
+        "bottom": 42.5,
+        "width": 105.3,
+        "height": 21
+      },
+      "message": "Element overlaps `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta` by 1527px² (69% of smaller element).",
+      "evidence": {
+        "otherSelector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
+        "overlapAreaPx2": 1527,
+        "overlapRatio": 0.69
+      },
+      "fix": "Remove negative margins or conflicting absolute positioning between `html > body > header.navbar > span.brand` and `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta`; use flex/grid `gap`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "body > header.navbar > div.nav-links > a:nth-of-type(1)",
+      "rect": {
+        "x": 374.5,
+        "y": 23.5,
+        "right": 430.7,
+        "bottom": 40.5,
+        "width": 56.3,
+        "height": 17
+      },
+      "message": "Interactive target is 56x17px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 56,
+        "height": 17,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 44px; min-height: 44px;` to `body > header.navbar > div.nav-links > a:nth-of-type(1)`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)",
+      "rect": {
+        "x": 448.7,
+        "y": 23.5,
+        "right": 496,
+        "bottom": 40.5,
+        "width": 47.3,
+        "height": 17
+      },
+      "message": "Interactive target is 47x17px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 47,
+        "height": 17,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 44px; min-height: 44px;` to `body > header.navbar > div.nav-links > a:nth-of-type(2)`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action",
+      "rect": {
+        "x": 181.8,
+        "y": 309.8,
+        "right": 201.8,
+        "bottom": 329.8,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Interactive target is 20x20px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 20,
+        "height": 20,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 44px; min-height: 44px;` to `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "#work-email",
+      "rect": {
+        "x": 21,
+        "y": 932.8,
+        "right": 188,
+        "bottom": 954.8,
+        "width": 167,
+        "height": 22
+      },
+      "message": "Interactive target is 167x22px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 167,
+        "height": 22,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 44px; min-height: 44px;` to `#work-email`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "high",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "#newsletter > p.legal",
+      "rect": {
+        "x": 21,
+        "y": 969.8,
+        "right": 354,
+        "bottom": 1002.6,
+        "width": 333,
+        "height": 32.8
+      },
+      "message": "Contrast 2.56:1 (APCA Lc 50.2) fails WCAG AA 4.5:1 for normal text \"By signing up you agree to receive p\" [alpha-stack: #94a3b8 on #ffffff].",
+      "evidence": {
+        "ratio": 2.56,
+        "required": 4.5,
+        "apcaLc": 50.2,
+        "fgHex": "#94a3b8",
+        "bgHex": "#ffffff",
+        "fontSizePx": 9.5,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#617692",
+        "suggestedRatio": 4.65
+      },
+      "fix": "Change `color` on `#newsletter > p.legal` from `#94a3b8` to `#617692` (achieves 4.65:1 while preserving hue).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-alt-text",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "1.1.1",
+      "selector": "#newsletter > img",
+      "rect": {
+        "x": 21,
+        "y": 879.796875,
+        "width": 96,
+        "height": 40
+      },
+      "message": "<img> (/assets/pulseflow-preview-missing.png) is missing the `alt` attribute.",
+      "evidence": {
+        "src": "/assets/pulseflow-preview-missing.png"
+      },
+      "fix": "Add descriptive `alt=\"...\"` to `#newsletter > img`, or `alt=\"\"` if purely decorative.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "3.1.1",
+      "selector": "html",
+      "message": "Document <html> element is missing a `lang` attribute.",
+      "evidence": {
+        "missing": "lang"
+      },
+      "fix": "Add `lang=\"en\"` (or your page language code) to `<html>`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "duplicate-id",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#work-email",
+      "message": "Duplicate DOM id=\"#work-email\" appears 2 times.",
+      "evidence": {
+        "id": "work-email",
+        "count": 2
+      },
+      "fix": "Make every `id` unique across the document (found 2 copies of `#work-email`).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "clickable-non-interactive",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.1.1",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta",
+      "rect": {
+        "x": 24,
+        "y": 298.8,
+        "right": 169.8,
+        "bottom": 340.8,
+        "width": 145.8,
+        "height": 42
+      },
+      "message": "<div> \"Start Free Trial\" uses `cursor: pointer` without semantic button/link or keyboard focusability.",
+      "evidence": {
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta",
+        "tag": "div",
+        "text": "Start Free Trial",
+        "hasOnClick": true,
+        "rect": {
+          "x": 24,
+          "y": 298.8,
+          "right": 169.8,
+          "bottom": 340.8,
+          "width": 145.8,
+          "height": 42
+        }
+      },
+      "fix": "Replace `<div>` at `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta` with a native `<button type=\"button\">` or `<a href>`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "a",
+      "rect": {
+        "x": 374,
+        "y": 24,
+        "width": 56,
+        "height": 17
+      },
+      "message": "Keyboard-focused element \"Features\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "a",
+        "text": "Features",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 374,
+          "y": 24,
+          "width": 56,
+          "height": 17
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `a`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "a",
+      "rect": {
+        "x": 449,
+        "y": 24,
+        "width": 47,
+        "height": 17
+      },
+      "message": "Keyboard-focused element \"Waitlist\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "a",
+        "text": "Waitlist",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 449,
+          "y": 24,
+          "width": 47,
+          "height": 17
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `a`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button.badge-cta",
+      "rect": {
+        "x": 24,
+        "y": 28,
+        "width": 238,
+        "height": 36
+      },
+      "message": "Keyboard-focused element \"New: v4.2 Live Benchmarks →\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button.badge-cta",
+        "text": "New: v4.2 Live Benchmarks →",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": "header.navbar",
+        "rect": {
+          "x": 24,
+          "y": 28,
+          "width": 238,
+          "height": 36
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button.badge-cta`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button.icon-action",
+      "rect": {
+        "x": 182,
+        "y": 310,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Keyboard-focused element \"BUTTON\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button.icon-action",
+        "text": "BUTTON",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 182,
+          "y": 310,
+          "width": 20,
+          "height": 20
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button.icon-action`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "#work-email",
+      "rect": {
+        "x": 21,
+        "y": 933,
+        "width": 167,
+        "height": 22
+      },
+      "message": "Keyboard-focused element \"name@company.com\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "#work-email",
+        "text": "name@company.com",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 21,
+          "y": 933,
+          "width": 167,
+          "height": 22
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `#work-email`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button",
+      "rect": {
+        "x": 196,
+        "y": 933,
+        "width": 82,
+        "height": 27
+      },
+      "message": "Keyboard-focused element \"Join Beta\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button",
+        "text": "Join Beta",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 196,
+          "y": 933,
+          "width": 82,
+          "height": 27
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.11",
+      "selector": "button.badge-cta",
+      "rect": {
+        "x": 24,
+        "y": 28,
+        "width": 238,
+        "height": 36
+      },
+      "message": "Focused element is obscured by `header.navbar` during keyboard Tab navigation.",
+      "evidence": {
+        "selector": "button.badge-cta",
+        "text": "New: v4.2 Live Benchmarks →",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": "header.navbar",
+        "rect": {
+          "x": 24,
+          "y": 28,
+          "width": 238,
+          "height": 36
+        }
+      },
+      "fix": "Add `scroll-margin-top` (matching sticky header height) to focusable elements or adjust sticky overlay z-index.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "unreadable-font-size",
+      "severity": "high",
+      "category": "typography",
+      "wcag": "1.4.4",
+      "selector": "#newsletter > p.legal",
+      "rect": {
+        "x": 21,
+        "y": 969.8,
+        "right": 354,
+        "bottom": 1002.6,
+        "width": 333,
+        "height": 32.8
+      },
+      "message": "Text \"By signing up you agree to recei\" renders at 9.5px (< 12px minimum legible size).",
+      "evidence": {
+        "fontSizePx": 9.5
+      },
+      "fix": "Increase `font-size` on `#newsletter > p.legal` to at least `12px` (14–16px for body text).",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "failed-network-asset",
+      "severity": "high",
+      "category": "runtime",
+      "wcag": "Runtime",
+      "selector": "document",
+      "message": "Failed asset request (404): http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "evidence": {
+        "url": "http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+        "status": 404
+      },
+      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "element-overlap",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "1.4.10",
+      "selector": "html > body > header.navbar > span.brand",
+      "rect": {
+        "x": 24,
+        "y": 21.5,
+        "right": 129.3,
+        "bottom": 42.5,
+        "width": 105.3,
+        "height": 21
+      },
+      "message": "Element overlaps `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta` by 1527px² (69% of smaller element).",
+      "evidence": {
+        "otherSelector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
+        "overlapAreaPx2": 1527,
+        "overlapRatio": 0.69
+      },
+      "fix": "Remove negative margins or conflicting absolute positioning between `html > body > header.navbar > span.brand` and `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta`; use flex/grid `gap`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "body > header.navbar > div.nav-links > a:nth-of-type(1)",
+      "rect": {
+        "x": 622.5,
+        "y": 23.5,
+        "right": 678.7,
+        "bottom": 40.5,
+        "width": 56.3,
+        "height": 17
+      },
+      "message": "Interactive target is 56x17px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 56,
+        "height": 17,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `body > header.navbar > div.nav-links > a:nth-of-type(1)`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)",
+      "rect": {
+        "x": 696.7,
+        "y": 23.5,
+        "right": 744,
+        "bottom": 40.5,
+        "width": 47.3,
+        "height": 17
+      },
+      "message": "Interactive target is 47x17px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 47,
+        "height": 17,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `body > header.navbar > div.nav-links > a:nth-of-type(2)`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action",
+      "rect": {
+        "x": 181.8,
+        "y": 208.1,
+        "right": 201.8,
+        "bottom": 228.1,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Interactive target is 20x20px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 20,
+        "height": 20,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "#work-email",
+      "rect": {
+        "x": 21,
+        "y": 723.1,
+        "right": 188,
+        "bottom": 745.1,
+        "width": 167,
+        "height": 22
+      },
+      "message": "Interactive target is 167x22px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 167,
+        "height": 22,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `#work-email`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "high",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "#newsletter > p.legal",
+      "rect": {
+        "x": 21,
+        "y": 760.1,
+        "right": 747,
+        "bottom": 771.1,
+        "width": 726,
+        "height": 10.9
+      },
+      "message": "Contrast 2.56:1 (APCA Lc 50.2) fails WCAG AA 4.5:1 for normal text \"By signing up you agree to receive p\" [alpha-stack: #94a3b8 on #ffffff].",
+      "evidence": {
+        "ratio": 2.56,
+        "required": 4.5,
+        "apcaLc": 50.2,
+        "fgHex": "#94a3b8",
+        "bgHex": "#ffffff",
+        "fontSizePx": 9.5,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#617692",
+        "suggestedRatio": 4.65
+      },
+      "fix": "Change `color` on `#newsletter > p.legal` from `#94a3b8` to `#617692` (achieves 4.65:1 while preserving hue).",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-alt-text",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "1.1.1",
+      "selector": "#newsletter > img",
+      "rect": {
+        "x": 21,
+        "y": 670.140625,
+        "width": 96,
+        "height": 40
+      },
+      "message": "<img> (/assets/pulseflow-preview-missing.png) is missing the `alt` attribute.",
+      "evidence": {
+        "src": "/assets/pulseflow-preview-missing.png"
+      },
+      "fix": "Add descriptive `alt=\"...\"` to `#newsletter > img`, or `alt=\"\"` if purely decorative.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "3.1.1",
+      "selector": "html",
+      "message": "Document <html> element is missing a `lang` attribute.",
+      "evidence": {
+        "missing": "lang"
+      },
+      "fix": "Add `lang=\"en\"` (or your page language code) to `<html>`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "duplicate-id",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#work-email",
+      "message": "Duplicate DOM id=\"#work-email\" appears 2 times.",
+      "evidence": {
+        "id": "work-email",
+        "count": 2
+      },
+      "fix": "Make every `id` unique across the document (found 2 copies of `#work-email`).",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "clickable-non-interactive",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.1.1",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta",
+      "rect": {
+        "x": 24,
+        "y": 197.1,
+        "right": 169.8,
+        "bottom": 239.1,
+        "width": 145.8,
+        "height": 42
+      },
+      "message": "<div> \"Start Free Trial\" uses `cursor: pointer` without semantic button/link or keyboard focusability.",
+      "evidence": {
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta",
+        "tag": "div",
+        "text": "Start Free Trial",
+        "hasOnClick": true,
+        "rect": {
+          "x": 24,
+          "y": 197.1,
+          "right": 169.8,
+          "bottom": 239.1,
+          "width": 145.8,
+          "height": 42
+        }
+      },
+      "fix": "Replace `<div>` at `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta` with a native `<button type=\"button\">` or `<a href>`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "a",
+      "rect": {
+        "x": 622,
+        "y": 24,
+        "width": 56,
+        "height": 17
+      },
+      "message": "Keyboard-focused element \"Features\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "a",
+        "text": "Features",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 622,
+          "y": 24,
+          "width": 56,
+          "height": 17
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `a`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "a",
+      "rect": {
+        "x": 697,
+        "y": 24,
+        "width": 47,
+        "height": 17
+      },
+      "message": "Keyboard-focused element \"Waitlist\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "a",
+        "text": "Waitlist",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 697,
+          "y": 24,
+          "width": 47,
+          "height": 17
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `a`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button.badge-cta",
+      "rect": {
+        "x": 24,
+        "y": 28,
+        "width": 238,
+        "height": 36
+      },
+      "message": "Keyboard-focused element \"New: v4.2 Live Benchmarks →\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button.badge-cta",
+        "text": "New: v4.2 Live Benchmarks →",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": "header.navbar",
+        "rect": {
+          "x": 24,
+          "y": 28,
+          "width": 238,
+          "height": 36
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button.badge-cta`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button.icon-action",
+      "rect": {
+        "x": 182,
+        "y": 208,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Keyboard-focused element \"BUTTON\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button.icon-action",
+        "text": "BUTTON",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 182,
+          "y": 208,
+          "width": 20,
+          "height": 20
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button.icon-action`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "#work-email",
+      "rect": {
+        "x": 21,
+        "y": 723,
+        "width": 167,
+        "height": 22
+      },
+      "message": "Keyboard-focused element \"name@company.com\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "#work-email",
+        "text": "name@company.com",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 21,
+          "y": 723,
+          "width": 167,
+          "height": 22
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `#work-email`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button",
+      "rect": {
+        "x": 196,
+        "y": 723,
+        "width": 82,
+        "height": 27
+      },
+      "message": "Keyboard-focused element \"Join Beta\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button",
+        "text": "Join Beta",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 196,
+          "y": 723,
+          "width": 82,
+          "height": 27
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.11",
+      "selector": "button.badge-cta",
+      "rect": {
+        "x": 24,
+        "y": 28,
+        "width": 238,
+        "height": 36
+      },
+      "message": "Focused element is obscured by `header.navbar` during keyboard Tab navigation.",
+      "evidence": {
+        "selector": "button.badge-cta",
+        "text": "New: v4.2 Live Benchmarks →",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": "header.navbar",
+        "rect": {
+          "x": 24,
+          "y": 28,
+          "width": 238,
+          "height": 36
+        }
+      },
+      "fix": "Add `scroll-margin-top` (matching sticky header height) to focusable elements or adjust sticky overlay z-index.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "unreadable-font-size",
+      "severity": "high",
+      "category": "typography",
+      "wcag": "1.4.4",
+      "selector": "#newsletter > p.legal",
+      "rect": {
+        "x": 21,
+        "y": 760.1,
+        "right": 747,
+        "bottom": 771.1,
+        "width": 726,
+        "height": 10.9
+      },
+      "message": "Text \"By signing up you agree to recei\" renders at 9.5px (< 12px minimum legible size).",
+      "evidence": {
+        "fontSizePx": 9.5
+      },
+      "fix": "Increase `font-size` on `#newsletter > p.legal` to at least `12px` (14–16px for body text).",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "failed-network-asset",
+      "severity": "high",
+      "category": "runtime",
+      "wcag": "Runtime",
+      "selector": "document",
+      "message": "Failed asset request (404): http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "evidence": {
+        "url": "http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+        "status": 404
+      },
+      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "body > header.navbar > div.nav-links > a:nth-of-type(1)",
+      "rect": {
+        "x": 1294.5,
+        "y": 23.5,
+        "right": 1350.7,
+        "bottom": 40.5,
+        "width": 56.3,
+        "height": 17
+      },
+      "message": "Interactive target is 56x17px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 56,
+        "height": 17,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `body > header.navbar > div.nav-links > a:nth-of-type(1)`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)",
+      "rect": {
+        "x": 1368.7,
+        "y": 23.5,
+        "right": 1416,
+        "bottom": 40.5,
+        "width": 47.3,
+        "height": 17
+      },
+      "message": "Interactive target is 47x17px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 47,
+        "height": 17,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `body > header.navbar > div.nav-links > a:nth-of-type(2)`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action",
+      "rect": {
+        "x": 397.8,
+        "y": 208.1,
+        "right": 417.8,
+        "bottom": 228.1,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Interactive target is 20x20px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 20,
+        "height": 20,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "high",
+      "category": "geometry",
+      "wcag": "2.5.8",
+      "selector": "#work-email",
+      "rect": {
+        "x": 261,
+        "y": 615.1,
+        "right": 428,
+        "bottom": 637.1,
+        "width": 167,
+        "height": 22
+      },
+      "message": "Interactive target is 167x22px (fails WCAG 2.2 AA 24x24px minimum).",
+      "evidence": {
+        "width": 167,
+        "height": 22,
+        "minimumPx": 24
+      },
+      "fix": "Add padding or `min-width: 24px; min-height: 24px;` to `#work-email`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "wcag-contrast",
+      "severity": "high",
+      "category": "contrast",
+      "wcag": "1.4.3",
+      "selector": "#newsletter > p.legal",
+      "rect": {
+        "x": 261,
+        "y": 652.1,
+        "right": 1179,
+        "bottom": 663.1,
+        "width": 918,
+        "height": 10.9
+      },
+      "message": "Contrast 2.56:1 (APCA Lc 50.2) fails WCAG AA 4.5:1 for normal text \"By signing up you agree to receive p\" [alpha-stack: #94a3b8 on #ffffff].",
+      "evidence": {
+        "ratio": 2.56,
+        "required": 4.5,
+        "apcaLc": 50.2,
+        "fgHex": "#94a3b8",
+        "bgHex": "#ffffff",
+        "fontSizePx": 9.5,
+        "fontWeight": "400",
+        "largeText": false,
+        "method": "alpha-stack",
+        "suggestedHex": "#617692",
+        "suggestedRatio": 4.65
+      },
+      "fix": "Change `color` on `#newsletter > p.legal` from `#94a3b8` to `#617692` (achieves 4.65:1 while preserving hue).",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-alt-text",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "1.1.1",
+      "selector": "#newsletter > img",
+      "rect": {
+        "x": 261,
+        "y": 562.140625,
+        "width": 96,
+        "height": 40
+      },
+      "message": "<img> (/assets/pulseflow-preview-missing.png) is missing the `alt` attribute.",
+      "evidence": {
+        "src": "/assets/pulseflow-preview-missing.png"
+      },
+      "fix": "Add descriptive `alt=\"...\"` to `#newsletter > img`, or `alt=\"\"` if purely decorative.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "3.1.1",
+      "selector": "html",
+      "message": "Document <html> element is missing a `lang` attribute.",
+      "evidence": {
+        "missing": "lang"
+      },
+      "fix": "Add `lang=\"en\"` (or your page language code) to `<html>`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "duplicate-id",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#work-email",
+      "message": "Duplicate DOM id=\"#work-email\" appears 2 times.",
+      "evidence": {
+        "id": "work-email",
+        "count": 2
+      },
+      "fix": "Make every `id` unique across the document (found 2 copies of `#work-email`).",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "clickable-non-interactive",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.1.1",
+      "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta",
+      "rect": {
+        "x": 240,
+        "y": 197.1,
+        "right": 385.8,
+        "bottom": 239.1,
+        "width": 145.8,
+        "height": 42
+      },
+      "message": "<div> \"Start Free Trial\" uses `cursor: pointer` without semantic button/link or keyboard focusability.",
+      "evidence": {
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta",
+        "tag": "div",
+        "text": "Start Free Trial",
+        "hasOnClick": true,
+        "rect": {
+          "x": 240,
+          "y": 197.1,
+          "right": 385.8,
+          "bottom": 239.1,
+          "width": 145.8,
+          "height": 42
+        }
+      },
+      "fix": "Replace `<div>` at `section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta` with a native `<button type=\"button\">` or `<a href>`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "a",
+      "rect": {
+        "x": 1294,
+        "y": 24,
+        "width": 56,
+        "height": 17
+      },
+      "message": "Keyboard-focused element \"Features\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "a",
+        "text": "Features",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 1294,
+          "y": 24,
+          "width": 56,
+          "height": 17
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `a`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "a",
+      "rect": {
+        "x": 1369,
+        "y": 24,
+        "width": 47,
+        "height": 17
+      },
+      "message": "Keyboard-focused element \"Waitlist\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "a",
+        "text": "Waitlist",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 1369,
+          "y": 24,
+          "width": 47,
+          "height": 17
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `a`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button.badge-cta",
+      "rect": {
+        "x": 240,
+        "y": 28,
+        "width": 238,
+        "height": 36
+      },
+      "message": "Keyboard-focused element \"New: v4.2 Live Benchmarks →\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button.badge-cta",
+        "text": "New: v4.2 Live Benchmarks →",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": "header.navbar",
+        "rect": {
+          "x": 240,
+          "y": 28,
+          "width": 238,
+          "height": 36
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button.badge-cta`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button.icon-action",
+      "rect": {
+        "x": 398,
+        "y": 208,
+        "width": 20,
+        "height": 20
+      },
+      "message": "Keyboard-focused element \"BUTTON\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button.icon-action",
+        "text": "BUTTON",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 398,
+          "y": 208,
+          "width": 20,
+          "height": 20
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button.icon-action`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "#work-email",
+      "rect": {
+        "x": 261,
+        "y": 615,
+        "width": 167,
+        "height": 22
+      },
+      "message": "Keyboard-focused element \"name@company.com\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "#work-email",
+        "text": "name@company.com",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 261,
+          "y": 615,
+          "width": 167,
+          "height": 22
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `#work-email`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.7",
+      "selector": "button",
+      "rect": {
+        "x": 436,
+        "y": 615,
+        "width": 82,
+        "height": 27
+      },
+      "message": "Keyboard-focused element \"Join Beta\" shows no visible focus indicator (outline/box-shadow/border unchanged).",
+      "evidence": {
+        "selector": "button",
+        "text": "Join Beta",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": null,
+        "rect": {
+          "x": 436,
+          "y": 615,
+          "width": 82,
+          "height": 27
+        }
+      },
+      "fix": "Add a clear `:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }` style on `button`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "focus-visibility",
+      "severity": "high",
+      "category": "accessibility",
+      "wcag": "2.4.11",
+      "selector": "button.badge-cta",
+      "rect": {
+        "x": 240,
+        "y": 28,
+        "width": 238,
+        "height": 36
+      },
+      "message": "Focused element is obscured by `header.navbar` during keyboard Tab navigation.",
+      "evidence": {
+        "selector": "button.badge-cta",
+        "text": "New: v4.2 Live Benchmarks →",
+        "hasVisibleFocus": false,
+        "outlineStyle": "none",
+        "occludedBy": "header.navbar",
+        "rect": {
+          "x": 240,
+          "y": 28,
+          "width": 238,
+          "height": 36
+        }
+      },
+      "fix": "Add `scroll-margin-top` (matching sticky header height) to focusable elements or adjust sticky overlay z-index.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "unreadable-font-size",
+      "severity": "high",
+      "category": "typography",
+      "wcag": "1.4.4",
+      "selector": "#newsletter > p.legal",
+      "rect": {
+        "x": 261,
+        "y": 652.1,
+        "right": 1179,
+        "bottom": 663.1,
+        "width": 918,
+        "height": 10.9
+      },
+      "message": "Text \"By signing up you agree to recei\" renders at 9.5px (< 12px minimum legible size).",
+      "evidence": {
+        "fontSizePx": 9.5
+      },
+      "fix": "Increase `font-size` on `#newsletter > p.legal` to at least `12px` (14–16px for body text).",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "failed-network-asset",
+      "severity": "high",
+      "category": "runtime",
+      "wcag": "Runtime",
+      "selector": "document",
+      "message": "Failed asset request (404): http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "evidence": {
+        "url": "http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+        "status": 404
+      },
+      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "medium",
+      "category": "geometry",
+      "wcag": "2.5.5",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
+      "rect": {
+        "x": 24,
+        "y": 28,
+        "right": 262.3,
+        "bottom": 64,
+        "width": 238.3,
+        "height": 36
+      },
+      "message": "Mobile touch target is 238x36px (below 44x44px recommended touch area).",
+      "evidence": {
+        "width": 238,
+        "height": 36,
+        "recommendedPx": 44
+      },
+      "fix": "Increase hit area of `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta` to at least `44x44px` on mobile viewports.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "touch-target-size",
+      "severity": "medium",
+      "category": "geometry",
+      "wcag": "2.5.5",
+      "selector": "#newsletter > div.newsletter-row > button",
+      "rect": {
+        "x": 196,
+        "y": 932.8,
+        "right": 278.2,
+        "bottom": 959.8,
+        "width": 82.2,
+        "height": 27
+      },
+      "message": "Mobile touch target is 82x27px (below 44x44px recommended touch area).",
+      "evidence": {
+        "width": 82,
+        "height": 27,
+        "recommendedPx": 44
+      },
+      "fix": "Increase hit area of `#newsletter > div.newsletter-row > button` to at least `44x44px` on mobile viewports.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "heading-hierarchy",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#features > div.card:nth-of-type(1) > h4",
+      "rect": {
+        "x": 33,
+        "y": 539.8,
+        "right": 342,
+        "bottom": 557.8,
+        "width": 309,
+        "height": 18
+      },
+      "message": "Heading level skipped from <h1> to <h4> (\"Instant Cohorts\").",
+      "evidence": {
+        "previousLevel": 1,
+        "currentLevel": 4
+      },
+      "fix": "Change `#features > div.card:nth-of-type(1) > h4` to `<h2>` and style size via CSS instead of heading tags.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "2.4.2",
+      "selector": "head",
+      "message": "Document is missing a non-empty <title>.",
+      "evidence": {
+        "missing": "title"
+      },
+      "fix": "Add a descriptive `<title>` inside `<head>`.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "body",
+      "message": "Page has no `<main>` landmark region.",
+      "evidence": {
+        "mainCount": 0
+      },
+      "fix": "Wrap the primary page content in a `<main>` element.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "heading-hierarchy",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#features > div.card:nth-of-type(1) > h4",
+      "rect": {
+        "x": 33,
+        "y": 438.1,
+        "right": 359,
+        "bottom": 456.1,
+        "width": 326,
+        "height": 18
+      },
+      "message": "Heading level skipped from <h1> to <h4> (\"Instant Cohorts\").",
+      "evidence": {
+        "previousLevel": 1,
+        "currentLevel": 4
+      },
+      "fix": "Change `#features > div.card:nth-of-type(1) > h4` to `<h2>` and style size via CSS instead of heading tags.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "2.4.2",
+      "selector": "head",
+      "message": "Document is missing a non-empty <title>.",
+      "evidence": {
+        "missing": "title"
+      },
+      "fix": "Add a descriptive `<title>` inside `<head>`.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "body",
+      "message": "Page has no `<main>` landmark region.",
+      "evidence": {
+        "mainCount": 0
+      },
+      "fix": "Wrap the primary page content in a `<main>` element.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "heading-hierarchy",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "#features > div.card:nth-of-type(1) > h4",
+      "rect": {
+        "x": 273,
+        "y": 438.1,
+        "right": 537.7,
+        "bottom": 456.1,
+        "width": 264.7,
+        "height": 18
+      },
+      "message": "Heading level skipped from <h1> to <h4> (\"Instant Cohorts\").",
+      "evidence": {
+        "previousLevel": 1,
+        "currentLevel": 4
+      },
+      "fix": "Change `#features > div.card:nth-of-type(1) > h4` to `<h2>` and style size via CSS instead of heading tags.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "2.4.2",
+      "selector": "head",
+      "message": "Document is missing a non-empty <title>.",
+      "evidence": {
+        "missing": "title"
+      },
+      "fix": "Add a descriptive `<title>` inside `<head>`.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "missing-landmarks",
+      "severity": "medium",
+      "category": "accessibility",
+      "wcag": "1.3.1",
+      "selector": "body",
+      "message": "Page has no `<main>` landmark region.",
+      "evidence": {
+        "mainCount": 0
+      },
+      "fix": "Wrap the primary page content in a `<main>` element.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub",
+      "rect": {
+        "x": 24,
+        "y": 220.2,
+        "right": 351,
+        "bottom": 276.8,
+        "width": 327,
+        "height": 56.6
+      },
+      "message": "Multi-line prose has cramped line-height (1.18x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.18,
+        "fontSizePx": 16
+      },
+      "fix": "Set `line-height: 1.5` on `body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub` for comfortable reading.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(1) > p",
+      "rect": {
+        "x": 33,
+        "y": 563.8,
+        "right": 342,
+        "bottom": 614.2,
+        "width": 309,
+        "height": 50.4
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(1) > p` for comfortable reading.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(2) > p",
+      "rect": {
+        "x": 33,
+        "y": 671.8,
+        "right": 342,
+        "bottom": 722.2,
+        "width": 309,
+        "height": 50.4
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(2) > p` for comfortable reading.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(3) > p",
+      "rect": {
+        "x": 33,
+        "y": 779.8,
+        "right": 342,
+        "bottom": 830.2,
+        "width": 309,
+        "height": 50.4
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(3) > p` for comfortable reading.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#newsletter > p.legal",
+      "rect": {
+        "x": 21,
+        "y": 969.8,
+        "right": 354,
+        "bottom": 1002.6,
+        "width": 333,
+        "height": 32.8
+      },
+      "message": "Multi-line prose has cramped line-height (1.15x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.15,
+        "fontSizePx": 9.5
+      },
+      "fix": "Set `line-height: 1.5` on `#newsletter > p.legal` for comfortable reading.",
+      "viewport": "mobile",
+      "viewportWidth": 375,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub",
+      "rect": {
+        "x": 24,
+        "y": 137.4,
+        "right": 584,
+        "bottom": 175.1,
+        "width": 560,
+        "height": 37.8
+      },
+      "message": "Multi-line prose has cramped line-height (1.18x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.18,
+        "fontSizePx": 16
+      },
+      "fix": "Set `line-height: 1.5` on `body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub` for comfortable reading.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(1) > p",
+      "rect": {
+        "x": 33,
+        "y": 462.1,
+        "right": 359,
+        "bottom": 512.5,
+        "width": 326,
+        "height": 50.4
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(1) > p` for comfortable reading.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(2) > p",
+      "rect": {
+        "x": 409,
+        "y": 462.1,
+        "right": 735,
+        "bottom": 512.5,
+        "width": 326,
+        "height": 50.4
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(2) > p` for comfortable reading.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(3) > p",
+      "rect": {
+        "x": 33,
+        "y": 570.1,
+        "right": 359,
+        "bottom": 620.5,
+        "width": 326,
+        "height": 50.4
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(3) > p` for comfortable reading.",
+      "viewport": "tablet",
+      "viewportWidth": 768,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub",
+      "rect": {
+        "x": 240,
+        "y": 137.4,
+        "right": 800,
+        "bottom": 175.1,
+        "width": 560,
+        "height": 37.8
+      },
+      "message": "Multi-line prose has cramped line-height (1.18x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.18,
+        "fontSizePx": 16
+      },
+      "fix": "Set `line-height: 1.5` on `body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub` for comfortable reading.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(1) > p",
+      "rect": {
+        "x": 273,
+        "y": 462.1,
+        "right": 537.7,
+        "bottom": 529.3,
+        "width": 264.7,
+        "height": 67.2
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(1) > p` for comfortable reading.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(2) > p",
+      "rect": {
+        "x": 587.7,
+        "y": 462.1,
+        "right": 852.3,
+        "bottom": 529.3,
+        "width": 264.7,
+        "height": 67.2
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(2) > p` for comfortable reading.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    },
+    {
+      "ruleId": "cramped-line-height",
+      "severity": "low",
+      "category": "typography",
+      "wcag": "1.4.12",
+      "selector": "#features > div.card:nth-of-type(3) > p",
+      "rect": {
+        "x": 902.3,
+        "y": 462.1,
+        "right": 1167,
+        "bottom": 512.5,
+        "width": 264.7,
+        "height": 50.4
+      },
+      "message": "Multi-line prose has cramped line-height (1.20x < 1.25x).",
+      "evidence": {
+        "lineHeightRatio": 1.2,
+        "fontSizePx": 14
+      },
+      "fix": "Set `line-height: 1.5` on `#features > div.card:nth-of-type(3) > p` for comfortable reading.",
+      "viewport": "desktop",
+      "viewportWidth": 1440,
+      "colorScheme": "light"
+    }
+  ]
+}

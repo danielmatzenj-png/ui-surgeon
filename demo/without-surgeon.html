@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    /* Typical AI reset that destroys keyboard accessibility */
+    button:focus, a:focus, input:focus { outline: none; }
+
+    /* Fixed navbar that accidentally overlaps top hero controls */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 64px;
+      background: rgba(15, 23, 42, 0.96);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      z-index: 100;
+    }
+    .brand { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
+    .nav-links { display: flex; gap: 18px; align-items: center; }
+    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 14px; }
+
+    /* Hero with trendy pastel gradient + white/light text (fails pixel-sampled contrast!) */
+    .hero {
+      padding: 20px 24px 48px;
+      background: linear-gradient(135deg, #c7d2fe 0%, #fbcfe8 55%, #fde68a 100%);
+    }
+    .hero-inner { max-width: 960px; margin: 0 auto; }
+    .badge-cta {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 18px;
+      background: #4f46e5;
+      color: #ffffff;
+      border: none;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero h1 {
+      margin: 22px 0 10px;
+      font-size: 36px;
+      line-height: 1.15;
+      color: #1e1b4b;
+    }
+    .hero-sub {
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.18;
+      color: #f8fafc;
+      max-width: 560px;
+    }
+    .hero-actions { display: flex; gap: 12px; align-items: center; }
+    .fake-cta {
+      cursor: pointer;
+      padding: 12px 20px;
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .icon-action {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      border: 1px solid #475569;
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    /* Fixed 520px metric strip causes horizontal overflow on 375px mobile! */
+    .metrics-strip {
+      width: 520px;
+      margin: 28px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 0 16px;
+    }
+    .metric {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .metric-val { font-size: 24px; font-weight: 700; color: #0f172a; }
+    /* Muted label fails WCAG 4.5:1 (#a8b3c2 on #ffffff = ~2.1:1) */
+    .metric-label { font-size: 13px; color: #a8b3c2; margin-top: 4px; }
+
+    /* Feature cards with fixed height causing silent text clipping */
+    .features {
+      max-width: 960px;
+      margin: 24px auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+      height: 92px;
+      overflow: hidden;
+    }
+    .card h4 { margin: 0 0 6px; font-size: 16px; color: #0f172a; }
+    .card p { margin: 0; font-size: 14px; color: #64748b; line-height: 1.2; }
+
+    /* Newsletter section with unlabeled input, duplicate ID, micro legal text */
+    .newsletter {
+      max-width: 960px;
+      margin: 28px auto 40px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    .newsletter-row { display: flex; gap: 8px; margin-top: 10px; }
+    .newsletter input {
+      padding: 4px 10px;
+      height: 22px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    .newsletter button {
+      padding: 6px 14px;
+      background: #4f46e5;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    .legal {
+      font-size: 9.5px;
+      color: #94a3b8;
+      margin-top: 10px;
+      line-height: 1.15;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <span class="brand">PulseFlow AI</span>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#newsletter">Waitlist</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <!-- Occluded by fixed 64px navbar -->
+      <button class="badge-cta" type="button">New: v4.2 Live Benchmarks →</button>
+      <h1>Ship product analytics in seconds</h1>
+      <p class="hero-sub">
+        Real-time funnel telemetry, automated anomaly alerts, and instant executive reports with zero SQL required for your team.
+      </p>
+      <div class="hero-actions">
+        <div class="fake-cta" onclick="alert('Demo started')">Start Free Trial</div>
+        <button class="icon-action" type="button"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics-strip">
+    <div class="metric">
+      <div class="metric-val">99.98%</div>
+      <div class="metric-label">Uptime SLA</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val">14ms</div>
+      <div class="metric-label">Query Latency</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val">42k+</div>
+      <div class="metric-label">Active Teams</div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="card">
+      <h4>Instant Cohorts</h4>
+      <p>Segment users across web and mobile funnels with automated retention curves, churn forecasting, and real-time cohort alerts.</p>
+    </div>
+    <div class="card">
+      <h4>Zero-Config Dashboards</h4>
+      <p>Auto-generated revenue, activation, and engagement boards updated every second with zero manual tracking code or schema setup.</p>
+    </div>
+    <div class="card">
+      <h4>Enterprise Governance</h4>
+      <p>Granular role-based access control, SOC 2 audit trails, SSO SAML integration, and automated PII scrubbing out of the box.</p>
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter">
+    <img src="/assets/pulseflow-preview-missing.png" width="96" height="40">
+    <div class="newsletter-row">
+      <input id="work-email" type="email" placeholder="name@company.com">
+      <span id="work-email" style="display:none">duplicate</span>
+      <button type="button">Join Beta</button>
+    </div>
+    <p class="legal">
+      By signing up you agree to receive product updates, benchmark newsletters, and accept our privacy policy and extended data processing terms.
+    </p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, sans-serif; background: #ffffff; color: #1e293b; }
+
+    /* Defect 1: Sticky header occluding CTA below */
+    .topbar {
+      position: fixed; top: 0; left: 0; right: 0; height: 64px;
+      background: #0f172a; color: #fff; display: flex; align-items: center;
+      justify-content: space-between; padding: 0 20px; z-index: 100;
+    }
+
+    /* Defect 2: Focus outline stripped globally */
+    button:focus, a:focus, input:focus { outline: none; }
+
+    /* Defect 3: Hero with bright gradient + light text (tests pixel-sampled contrast!) */
+    .hero {
+      padding: 16px 24px 48px;
+      background: linear-gradient(135deg, #fde68a 0%, #fbcfe8 100%);
+    }
+    .hero-subtitle {
+      color: #f8fafc;
+      font-size: 16px;
+      margin-top: 8px;
+    }
+
+    /* Defect 4: Fixed 540px wide banner causing mobile horizontal overflow */
+    .pricing-banner {
+      width: 540px;
+      background: #f1f5f9;
+      padding: 16px;
+      margin: 24px 16px;
+      border-radius: 8px;
+    }
+
+    /* Defect 5: Text clipping in fixed-height card */
+    .clipped-card {
+      width: 240px;
+      height: 36px;
+      overflow: hidden;
+      background: #e2e8f0;
+      padding: 8px;
+      margin: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    /* Defect 6: Low contrast normal text on white (#b4bcc8 on #fff ~= 1.9:1) */
+    .muted-note { color: #b4bcc8; font-size: 14px; padding: 0 16px; }
+
+    /* Defect 7: Tiny 18x18 icon button without aria-label */
+    .tiny-icon-btn {
+      width: 18px; height: 18px; padding: 0; border: 1px solid #334155;
+      background: #fff; font-size: 10px; line-height: 16px; margin: 16px;
+    }
+
+    /* Defect 8: Clickable div instead of button */
+    .fake-btn {
+      display: inline-block; cursor: pointer; padding: 10px 16px;
+      background: #2563eb; color: #fff; border-radius: 6px; margin: 16px;
+    }
+
+    /* Defect 9: Unreadable 9px legal text */
+    .micro-text { font-size: 9px; color: #334155; padding: 8px 16px; }
+
+    /* CTA positioned right under the fixed header so hit-test catches occlusion */
+    .occluded-cta {
+      position: relative;
+      margin-top: 12px;
+      padding: 12px 20px;
+      background: #1d4ed8;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <span>AcmeAI</span>
+    <a href="#pricing" style="color:#fff">Pricing</a>
+  </header>
+
+  <section class="hero">
+    <!-- Occluded at y=40..64 by fixed topbar -->
+    <button class="occluded-cta" type="button">Start Free Trial</button>
+    <h1>Ship faster with AI</h1>
+    <p class="hero-subtitle">Zero-config cloud workflows that scale effortlessly across your team.</p>
+  </section>
+
+  <!-- Skipped heading h1 -> h4 -->
+  <h4 style="padding: 0 16px;">Enterprise Features</h4>
+
+  <div class="pricing-banner">
+    Fixed 540px container that breaks 375px mobile layout with horizontal scrolling.
+  </div>
+
+  <div class="clipped-card">
+    This card description is way too long for its 36px fixed height container so lines are silently cut off.
+  </div>
+
+  <p class="muted-note">Cancel anytime. No credit card required for the 14-day evaluation period.</p>
+
+  <button class="tiny-icon-btn" type="button"></button>
+
+  <div class="fake-btn" onclick="console.log('clicked')">Launch Demo</div>
+
+  <!-- Unlabeled input + duplicate ID -->
+  <form style="padding: 16px;">
+    <input id="email-field" type="email" placeholder="you@company.com">
+    <span id="email-field" style="display:none">dup</span>
+  </form>
+
+  <!-- Broken image without alt -->
+  <img src="/does-not-exist-hero.png" width="120" height="80">
+
+  <p class="micro-text">By continuing you agree to our extended terms of service and data processing addendum.</p>
+</body>
+</html>

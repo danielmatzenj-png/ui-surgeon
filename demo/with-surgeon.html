@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PulseFlow AI — Team Analytics</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 76px; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+
+    /* Crisp keyboard focus ring preserved across all controls */
+    :focus-visible {
+      outline: 3px solid #4338ca;
+      outline-offset: 2px;
+    }
+
+    /* Sticky navbar that respects document flow (zero click occlusion) */
+    .navbar {
+      position: sticky;
+      top: 0;
+      min-height: 64px;
+      background: #0f172a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 24px;
+      z-index: 100;
+    }
+    .brand { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
+    .nav-links { display: flex; gap: 8px; align-items: center; }
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    .nav-links a:hover { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
+    .nav-links a:focus-visible { outline-color: #93c5fd; }
+
+    /* Same vibrant gradient hero, with pixel-verified high-contrast ink (#1e1b4b / #312e81) */
+    .hero {
+      padding: 40px 24px 48px;
+      background: linear-gradient(135deg, #c7d2fe 0%, #fbcfe8 55%, #fde68a 100%);
+    }
+    .hero-inner { max-width: 960px; margin: 0 auto; }
+    .badge-cta {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      background: #3730a3;
+      color: #ffffff;
+      border: none;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero h1 {
+      margin: 20px 0 12px;
+      font-size: clamp(28px, 5vw, 38px);
+      line-height: 1.18;
+      color: #1e1b4b;
+    }
+    .hero-sub {
+      margin: 0 0 24px;
+      font-size: 16px;
+      line-height: 1.55;
+      color: #1e1b4b;
+      max-width: 580px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .primary-cta {
+      min-height: 44px;
+      min-width: 44px;
+      cursor: pointer;
+      padding: 12px 22px;
+      background: #0f172a;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .icon-action {
+      min-width: 44px;
+      min-height: 44px;
+      border: 1px solid #334155;
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main { max-width: 960px; margin: 0 auto; padding: 0 16px 48px; }
+
+    /* Responsive grid — zero overflow at 375px, 768px, and 1440px */
+    .metrics-strip {
+      max-width: 100%;
+      margin: 28px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    .metric {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 16px;
+      min-width: 0;
+    }
+    .metric-val { font-size: 24px; font-weight: 700; color: #0f172a; }
+    /* Hue-preserving accessible slate (#475569 on #ffffff = 7.58:1 AAA) */
+    .metric-label { font-size: 13px; color: #475569; margin-top: 4px; font-weight: 500; }
+
+    .section-title {
+      font-size: 22px;
+      color: #0f172a;
+      margin: 32px 0 14px;
+    }
+
+    /* Feature cards with min-height instead of clipping fixed height */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 20px;
+      min-height: 120px;
+      min-width: 0;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 17px; color: #0f172a; }
+    .card p { margin: 0; font-size: 14px; color: #334155; line-height: 1.55; }
+
+    /* Accessible newsletter form with explicit label, 44px touch targets, clean inline SVG preview */
+    .newsletter {
+      margin-top: 32px;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+    }
+    .newsletter-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .newsletter-header h2 { margin: 0; font-size: 18px; color: #0f172a; }
+    .newsletter-form { display: flex; flex-direction: column; gap: 8px; max-width: 440px; }
+    .newsletter-form label { font-size: 14px; font-weight: 600; color: #0f172a; }
+    .newsletter-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .newsletter input {
+      flex: 1 1 220px;
+      min-width: 0;
+      min-height: 44px;
+      padding: 10px 14px;
+      border: 1px solid #64748b;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #0f172a;
+      background: #ffffff;
+    }
+    .newsletter button {
+      min-height: 44px;
+      min-width: 44px;
+      padding: 10px 18px;
+      background: #3730a3;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .legal {
+      font-size: 13px;
+      color: #475569;
+      margin: 12px 0 0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <span class="brand">PulseFlow AI</span>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#newsletter">Waitlist</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <button class="badge-cta" type="button">New: v4.2 Live Benchmarks →</button>
+      <h1>Ship product analytics in seconds</h1>
+      <p class="hero-sub">
+        Real-time funnel telemetry, automated anomaly alerts, and instant executive reports with zero SQL required for your team.
+      </p>
+      <div class="hero-actions">
+        <button class="primary-cta" type="button" onclick="alert('Demo started')">Start Free Trial</button>
+        <button class="icon-action" type="button" aria-label="Watch interactive product tour">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="metrics-strip" aria-label="Key platform metrics">
+      <div class="metric">
+        <div class="metric-val">99.98%</div>
+        <div class="metric-label">Uptime SLA</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">14ms</div>
+        <div class="metric-label">Query Latency</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">42k+</div>
+        <div class="metric-label">Active Teams</div>
+      </div>
+    </section>
+
+    <h2 id="features" class="section-title">Platform Capabilities</h2>
+    <section class="features">
+      <article class="card">
+        <h3>Instant Cohorts</h3>
+        <p>Segment users across web and mobile funnels with automated retention curves, churn forecasting, and real-time cohort alerts.</p>
+      </article>
+      <article class="card">
+        <h3>Zero-Config Dashboards</h3>
+        <p>Auto-generated revenue, activation, and engagement boards updated every second with zero manual tracking code or schema setup.</p>
+      </article>
+      <article class="card">
+        <h3>Enterprise Governance</h3>
+        <p>Granular role-based access control, SOC 2 audit trails, SSO SAML integration, and automated PII scrubbing out of the box.</p>
+      </article>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+      <div class="newsletter-header">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#3730a3"/>
+          <path d="M9 23L15 16L20 20L27 12" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h2>Request Early Access</h2>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault()">
+        <label for="work-email">Work email</label>
+        <div class="newsletter-row">
+          <input id="work-email" type="email" placeholder="name@company.com" autocomplete="email">
+          <button type="submit">Join Beta</button>
+        </div>
+      </form>
+      <p class="legal">
+        By signing up you agree to receive product updates, benchmark newsletters, and accept our privacy policy and data processing terms.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

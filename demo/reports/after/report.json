@@ -1,0 +1,627 @@
+{
+  "tool": "ui-surgeon",
+  "version": "1.0.0",
+  "target": "demo/with-surgeon.html",
+  "auditedAt": "2026-11-25T21:14:55.357Z",
+  "durationMs": 3544,
+  "summary": {
+    "score": 100,
+    "total": 0,
+    "counts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "passed": true
+  },
+  "matrix": [
+    {
+      "viewport": "mobile",
+      "width": 375,
+      "height": 812,
+      "colorScheme": "light",
+      "elementsScanned": 48,
+      "tabStopsVisited": 7,
+      "cls": 0,
+      "findingCount": 0
+    },
+    {
+      "viewport": "tablet",
+      "width": 768,
+      "height": 1024,
+      "colorScheme": "light",
+      "elementsScanned": 48,
+      "tabStopsVisited": 7,
+      "cls": 0,
+      "findingCount": 0
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 900,
+      "colorScheme": "light",
+      "elementsScanned": 48,
+      "tabStopsVisited": 7,
+      "cls": 0,
+      "findingCount": 0
+    }
+  ],
+  "diff": {
+    "baselineScore": 0,
+    "fixedCount": 110,
+    "introducedCount": 0,
+    "remainingCount": 0,
+    "fixed": [
+      {
+        "ruleId": "horizontal-overflow",
+        "viewport": "mobile",
+        "selector": "html > body > section.metrics-strip:nth-of-type(2)"
+      },
+      {
+        "ruleId": "horizontal-overflow",
+        "viewport": "mobile",
+        "selector": "html > body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3)"
+      },
+      {
+        "ruleId": "horizontal-overflow",
+        "viewport": "mobile",
+        "selector": "html > body > header.navbar > div.nav-links"
+      },
+      {
+        "ruleId": "horizontal-overflow",
+        "viewport": "mobile",
+        "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)"
+      },
+      {
+        "ruleId": "horizontal-overflow",
+        "viewport": "mobile",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-val:nth-of-type(1)"
+      },
+      {
+        "ruleId": "horizontal-overflow",
+        "viewport": "mobile",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "hit-test-occlusion",
+        "viewport": "mobile",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "mobile",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "mobile",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "mobile",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "mobile",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "missing-accessible-name",
+        "viewport": "mobile",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action"
+      },
+      {
+        "ruleId": "missing-form-label",
+        "viewport": "mobile",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "broken-image",
+        "viewport": "mobile",
+        "selector": "#newsletter > img"
+      },
+      {
+        "ruleId": "hit-test-occlusion",
+        "viewport": "tablet",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "tablet",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "tablet",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "tablet",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "tablet",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "missing-accessible-name",
+        "viewport": "tablet",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action"
+      },
+      {
+        "ruleId": "missing-form-label",
+        "viewport": "tablet",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "broken-image",
+        "viewport": "tablet",
+        "selector": "#newsletter > img"
+      },
+      {
+        "ruleId": "hit-test-occlusion",
+        "viewport": "desktop",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "desktop",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "desktop",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(1) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "desktop",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(2) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "desktop",
+        "selector": "body > section.metrics-strip:nth-of-type(2) > div.metric:nth-of-type(3) > div.metric-label:nth-of-type(2)"
+      },
+      {
+        "ruleId": "missing-accessible-name",
+        "viewport": "desktop",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action"
+      },
+      {
+        "ruleId": "missing-form-label",
+        "viewport": "desktop",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "broken-image",
+        "viewport": "desktop",
+        "selector": "#newsletter > img"
+      },
+      {
+        "ruleId": "element-overlap",
+        "viewport": "mobile",
+        "selector": "html > body > header.navbar > span.brand"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "mobile",
+        "selector": "body > header.navbar > div.nav-links > a:nth-of-type(1)"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "mobile",
+        "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "mobile",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "mobile",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "mobile",
+        "selector": "#newsletter > p.legal"
+      },
+      {
+        "ruleId": "missing-alt-text",
+        "viewport": "mobile",
+        "selector": "#newsletter > img"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "mobile",
+        "selector": "html"
+      },
+      {
+        "ruleId": "duplicate-id",
+        "viewport": "mobile",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "clickable-non-interactive",
+        "viewport": "mobile",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "mobile",
+        "selector": "a"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "mobile",
+        "selector": "a"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "mobile",
+        "selector": "button.badge-cta"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "mobile",
+        "selector": "button.icon-action"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "mobile",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "mobile",
+        "selector": "button"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "mobile",
+        "selector": "button.badge-cta"
+      },
+      {
+        "ruleId": "unreadable-font-size",
+        "viewport": "mobile",
+        "selector": "#newsletter > p.legal"
+      },
+      {
+        "ruleId": "failed-network-asset",
+        "viewport": "mobile",
+        "selector": "document"
+      },
+      {
+        "ruleId": "element-overlap",
+        "viewport": "tablet",
+        "selector": "html > body > header.navbar > span.brand"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "tablet",
+        "selector": "body > header.navbar > div.nav-links > a:nth-of-type(1)"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "tablet",
+        "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "tablet",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "tablet",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "tablet",
+        "selector": "#newsletter > p.legal"
+      },
+      {
+        "ruleId": "missing-alt-text",
+        "viewport": "tablet",
+        "selector": "#newsletter > img"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "tablet",
+        "selector": "html"
+      },
+      {
+        "ruleId": "duplicate-id",
+        "viewport": "tablet",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "clickable-non-interactive",
+        "viewport": "tablet",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "tablet",
+        "selector": "a"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "tablet",
+        "selector": "a"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "tablet",
+        "selector": "button.badge-cta"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "tablet",
+        "selector": "button.icon-action"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "tablet",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "tablet",
+        "selector": "button"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "tablet",
+        "selector": "button.badge-cta"
+      },
+      {
+        "ruleId": "unreadable-font-size",
+        "viewport": "tablet",
+        "selector": "#newsletter > p.legal"
+      },
+      {
+        "ruleId": "failed-network-asset",
+        "viewport": "tablet",
+        "selector": "document"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "desktop",
+        "selector": "body > header.navbar > div.nav-links > a:nth-of-type(1)"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "desktop",
+        "selector": "body > header.navbar > div.nav-links > a:nth-of-type(2)"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "desktop",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > button.icon-action"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "desktop",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "wcag-contrast",
+        "viewport": "desktop",
+        "selector": "#newsletter > p.legal"
+      },
+      {
+        "ruleId": "missing-alt-text",
+        "viewport": "desktop",
+        "selector": "#newsletter > img"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "desktop",
+        "selector": "html"
+      },
+      {
+        "ruleId": "duplicate-id",
+        "viewport": "desktop",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "clickable-non-interactive",
+        "viewport": "desktop",
+        "selector": "section.hero:nth-of-type(1) > div.hero-inner > div.hero-actions > div.fake-cta"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "desktop",
+        "selector": "a"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "desktop",
+        "selector": "a"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "desktop",
+        "selector": "button.badge-cta"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "desktop",
+        "selector": "button.icon-action"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "desktop",
+        "selector": "#work-email"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "desktop",
+        "selector": "button"
+      },
+      {
+        "ruleId": "focus-visibility",
+        "viewport": "desktop",
+        "selector": "button.badge-cta"
+      },
+      {
+        "ruleId": "unreadable-font-size",
+        "viewport": "desktop",
+        "selector": "#newsletter > p.legal"
+      },
+      {
+        "ruleId": "failed-network-asset",
+        "viewport": "desktop",
+        "selector": "document"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "mobile",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta"
+      },
+      {
+        "ruleId": "touch-target-size",
+        "viewport": "mobile",
+        "selector": "#newsletter > div.newsletter-row > button"
+      },
+      {
+        "ruleId": "heading-hierarchy",
+        "viewport": "mobile",
+        "selector": "#features > div.card:nth-of-type(1) > h4"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "mobile",
+        "selector": "head"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "mobile",
+        "selector": "body"
+      },
+      {
+        "ruleId": "heading-hierarchy",
+        "viewport": "tablet",
+        "selector": "#features > div.card:nth-of-type(1) > h4"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "tablet",
+        "selector": "head"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "tablet",
+        "selector": "body"
+      },
+      {
+        "ruleId": "heading-hierarchy",
+        "viewport": "desktop",
+        "selector": "#features > div.card:nth-of-type(1) > h4"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "desktop",
+        "selector": "head"
+      },
+      {
+        "ruleId": "missing-landmarks",
+        "viewport": "desktop",
+        "selector": "body"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "mobile",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "mobile",
+        "selector": "#features > div.card:nth-of-type(1) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "mobile",
+        "selector": "#features > div.card:nth-of-type(2) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "mobile",
+        "selector": "#features > div.card:nth-of-type(3) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "mobile",
+        "selector": "#newsletter > p.legal"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "tablet",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "tablet",
+        "selector": "#features > div.card:nth-of-type(1) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "tablet",
+        "selector": "#features > div.card:nth-of-type(2) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "tablet",
+        "selector": "#features > div.card:nth-of-type(3) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "desktop",
+        "selector": "body > section.hero:nth-of-type(1) > div.hero-inner > p.hero-sub"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "desktop",
+        "selector": "#features > div.card:nth-of-type(1) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "desktop",
+        "selector": "#features > div.card:nth-of-type(2) > p"
+      },
+      {
+        "ruleId": "cramped-line-height",
+        "viewport": "desktop",
+        "selector": "#features > div.card:nth-of-type(3) > p"
+      }
+    ],
+    "introduced": []
+  },
+  "screenshots": [
+    {
+      "viewport": "mobile",
+      "colorScheme": "light",
+      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/after/annotated-mobile-light.png"
+    },
+    {
+      "viewport": "tablet",
+      "colorScheme": "light",
+      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/after/annotated-tablet-light.png"
+    },
+    {
+      "viewport": "desktop",
+      "colorScheme": "light",
+      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/after/annotated-desktop-light.png"
+    }
+  ],
+  "findings": []
+}

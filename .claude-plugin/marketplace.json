@@ -1,0 +1,19 @@
+{
+  "name": "ui-surgeon-marketplace",
+  "owner": {
+    "name": "Daniel Matzen"
+  },
+  "metadata": {
+    "description": "Official marketplace distribution for UI Surgeon — closed-loop visual geometry, contrast, and WCAG 2.2 accessibility auditing.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ui-surgeon",
+      "source": "./",
+      "description": "Closed-loop visual geometry, pixel-verified contrast (WCAG 2.1 + APCA), and WCAG 2.2 accessibility surgeon.",
+      "version": "1.0.0",
+      "keywords": ["ui", "a11y", "wcag", "contrast", "layout", "qa"]
+    }
+  ]
+}
