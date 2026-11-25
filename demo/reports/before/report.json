@@ -2,14 +2,14 @@
   "tool": "ui-surgeon",
   "version": "1.0.0",
   "target": "demo/without-surgeon.html",
-  "auditedAt": "2026-11-25T21:14:13.204Z",
-  "durationMs": 3666,
+  "auditedAt": "2026-11-25T21:33:58.571Z",
+  "durationMs": 3191,
   "summary": {
     "score": 0,
-    "total": 110,
+    "total": 108,
     "counts": {
       "critical": 30,
-      "high": 56,
+      "high": 54,
       "medium": 11,
       "low": 13
     },
@@ -24,7 +24,7 @@
       "elementsScanned": 40,
       "tabStopsVisited": 6,
       "cls": 0,
-      "findingCount": 43
+      "findingCount": 42
     },
     {
       "viewport": "tablet",
@@ -34,7 +34,7 @@
       "elementsScanned": 40,
       "tabStopsVisited": 6,
       "cls": 0,
-      "findingCount": 34
+      "findingCount": 33
     },
     {
       "viewport": "desktop",
@@ -52,17 +52,17 @@
     {
       "viewport": "mobile",
       "colorScheme": "light",
-      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/before/annotated-mobile-light.png"
+      "path": "demo/reports/before/annotated-mobile-light.png"
     },
     {
       "viewport": "tablet",
       "colorScheme": "light",
-      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/before/annotated-tablet-light.png"
+      "path": "demo/reports/before/annotated-tablet-light.png"
     },
     {
       "viewport": "desktop",
       "colorScheme": "light",
-      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/before/annotated-desktop-light.png"
+      "path": "demo/reports/before/annotated-desktop-light.png"
     }
   ],
   "findings": [
@@ -916,31 +916,6 @@
       "colorScheme": "light"
     },
     {
-      "ruleId": "element-overlap",
-      "severity": "high",
-      "category": "geometry",
-      "wcag": "1.4.10",
-      "selector": "html > body > header.navbar > span.brand",
-      "rect": {
-        "x": 24,
-        "y": 21.5,
-        "right": 129.3,
-        "bottom": 42.5,
-        "width": 105.3,
-        "height": 21
-      },
-      "message": "Element overlaps `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta` by 1527px² (69% of smaller element).",
-      "evidence": {
-        "otherSelector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
-        "overlapAreaPx2": 1527,
-        "overlapRatio": 0.69
-      },
-      "fix": "Remove negative margins or conflicting absolute positioning between `html > body > header.navbar > span.brand` and `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta`; use flex/grid `gap`.",
-      "viewport": "mobile",
-      "viewportWidth": 375,
-      "colorScheme": "light"
-    },
-    {
       "ruleId": "touch-target-size",
       "severity": "high",
       "category": "geometry",
@@ -1405,39 +1380,14 @@
       "category": "runtime",
       "wcag": "Runtime",
       "selector": "document",
-      "message": "Failed asset request (404): http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "message": "Failed asset request (404): http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
       "evidence": {
-        "url": "http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+        "url": "http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
         "status": 404
       },
-      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
       "viewport": "mobile",
       "viewportWidth": 375,
-      "colorScheme": "light"
-    },
-    {
-      "ruleId": "element-overlap",
-      "severity": "high",
-      "category": "geometry",
-      "wcag": "1.4.10",
-      "selector": "html > body > header.navbar > span.brand",
-      "rect": {
-        "x": 24,
-        "y": 21.5,
-        "right": 129.3,
-        "bottom": 42.5,
-        "width": 105.3,
-        "height": 21
-      },
-      "message": "Element overlaps `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta` by 1527px² (69% of smaller element).",
-      "evidence": {
-        "otherSelector": "body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta",
-        "overlapAreaPx2": 1527,
-        "overlapRatio": 0.69
-      },
-      "fix": "Remove negative margins or conflicting absolute positioning between `html > body > header.navbar > span.brand` and `body > section.hero:nth-of-type(1) > div.hero-inner > button.badge-cta`; use flex/grid `gap`.",
-      "viewport": "tablet",
-      "viewportWidth": 768,
       "colorScheme": "light"
     },
     {
@@ -1905,12 +1855,12 @@
       "category": "runtime",
       "wcag": "Runtime",
       "selector": "document",
-      "message": "Failed asset request (404): http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "message": "Failed asset request (404): http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
       "evidence": {
-        "url": "http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+        "url": "http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
         "status": 404
       },
-      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
       "viewport": "tablet",
       "viewportWidth": 768,
       "colorScheme": "light"
@@ -2380,12 +2330,12 @@
       "category": "runtime",
       "wcag": "Runtime",
       "selector": "document",
-      "message": "Failed asset request (404): http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "message": "Failed asset request (404): http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
       "evidence": {
-        "url": "http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+        "url": "http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
         "status": 404
       },
-      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49454/assets/pulseflow-preview-missing.png",
+      "fix": "Fix or remove the broken asset URL: http://127.0.0.1:49930/assets/pulseflow-preview-missing.png",
       "viewport": "desktop",
       "viewportWidth": 1440,
       "colorScheme": "light"

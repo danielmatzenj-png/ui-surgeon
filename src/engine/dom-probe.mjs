@@ -257,12 +257,17 @@ export const DOM_PROBE_EXPRESSION = `(() => {
     const clipsX = (overflowX === 'hidden' || overflowX === 'clip') && el.scrollWidth > el.clientWidth + 3;
     const clipsY = (overflowY === 'hidden' || overflowY === 'clip') && el.scrollHeight > el.clientHeight + 3;
 
-    // Ancestor chain indices to avoid parent-child false overlaps
+    // Ancestor chain indices to avoid parent-child false overlaps + detect fixed/sticky overlay layers
     const ancestorSelectors = [];
+    let inFixedLayer = style.position === 'fixed' || style.position === 'sticky';
     let p = el.parentElement;
     let depth = 0;
     while (p && depth < 10) {
       ancestorSelectors.push(cssPath(p));
+      if (!inFixedLayer) {
+        const ps = getComputedStyle(p).position;
+        if (ps === 'fixed' || ps === 'sticky') inFixedLayer = true;
+      }
       p = p.parentElement;
       depth++;
     }
@@ -286,6 +291,7 @@ export const DOM_PROBE_EXPRESSION = `(() => {
         height: rect.height,
       },
       position: style.position,
+      inFixedLayer,
       zIndex: style.zIndex,
       pointerEvents: style.pointerEvents,
       color: style.color,

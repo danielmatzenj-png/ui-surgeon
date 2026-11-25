@@ -2,8 +2,8 @@
   "tool": "ui-surgeon",
   "version": "1.0.0",
   "target": "demo/with-surgeon.html",
-  "auditedAt": "2026-11-25T21:14:55.357Z",
-  "durationMs": 3544,
+  "auditedAt": "2026-11-25T21:34:13.051Z",
+  "durationMs": 2954,
   "summary": {
     "score": 100,
     "total": 0,
@@ -49,7 +49,7 @@
   ],
   "diff": {
     "baselineScore": 0,
-    "fixedCount": 110,
+    "fixedCount": 108,
     "introducedCount": 0,
     "remainingCount": 0,
     "fixed": [
@@ -204,11 +204,6 @@
         "selector": "#newsletter > img"
       },
       {
-        "ruleId": "element-overlap",
-        "viewport": "mobile",
-        "selector": "html > body > header.navbar > span.brand"
-      },
-      {
         "ruleId": "touch-target-size",
         "viewport": "mobile",
         "selector": "body > header.navbar > div.nav-links > a:nth-of-type(1)"
@@ -297,11 +292,6 @@
         "ruleId": "failed-network-asset",
         "viewport": "mobile",
         "selector": "document"
-      },
-      {
-        "ruleId": "element-overlap",
-        "viewport": "tablet",
-        "selector": "html > body > header.navbar > span.brand"
       },
       {
         "ruleId": "touch-target-size",
@@ -610,17 +600,17 @@
     {
       "viewport": "mobile",
       "colorScheme": "light",
-      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/after/annotated-mobile-light.png"
+      "path": "demo/reports/after/annotated-mobile-light.png"
     },
     {
       "viewport": "tablet",
       "colorScheme": "light",
-      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/after/annotated-tablet-light.png"
+      "path": "demo/reports/after/annotated-tablet-light.png"
     },
     {
       "viewport": "desktop",
       "colorScheme": "light",
-      "path": "/Users/Dani/.gemini/antigravity/scratch/ui-surgeon/demo/reports/after/annotated-desktop-light.png"
+      "path": "demo/reports/after/annotated-desktop-light.png"
     }
   ],
   "findings": []

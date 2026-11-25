@@ -115,6 +115,7 @@ export const geometryRules = [
         (el) =>
           (el.interactive || el.directText) &&
           el.pointerEvents !== 'none' &&
+          !el.inFixedLayer &&
           el.position !== 'fixed' &&
           el.position !== 'sticky' &&
           el.rect.width >= 10 &&

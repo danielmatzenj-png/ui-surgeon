@@ -351,7 +351,8 @@ export async function runAudit(target, options = {}) {
           const fname = `annotated-${vp.name}-${colorScheme}.png`;
           const fpath = path.join(outDir, fname);
           fs.writeFileSync(fpath, Buffer.from(annShot.data, 'base64'));
-          screenshots.push({ viewport: vp.name, colorScheme, path: fpath });
+          const relPath = path.relative(process.cwd(), fpath);
+          screenshots.push({ viewport: vp.name, colorScheme, path: relPath.startsWith('..') ? fpath : relPath });
         }
 
         matrixRuns.push({
